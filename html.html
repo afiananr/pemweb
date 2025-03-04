@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <script language="javascript" src="js.js"></script>
+</head>
+
+<body>
+
+    <form id="PengajuanForm" onsubmit="return validasiNama() && validasiNominal() && validasiTujuan() && validasiJenisUsaha()" > 
+        <h1>Formulir Pengajuan Dana UMKM</h2>  
+        <div class="form-group">
+            <label for="email">Email Pemohon</label>
+            <span class="separator">:</span>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <span class="separator">:</span>
+            <input type="text" id="nama" name="nama" required>
+        </div>
+
+        <div class="form-group">
+            <label for="tptLahir">Tempat Lahir</label>
+            <span class="separator">:</span>
+            <input type="text" id="tptLahir" name="tptLahir" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="tglLahir">Tanggal Lahir</label>
+            <span class="separator">:</span>
+            <input type="date" id="tglLahir" name="tglLahir" required>
+        </div>
+
+        <div class="form-group">
+            <label>Jenis Kelamin</label>
+            <span class="separator">:</span>
+            <div class="radio-group">
+                <input type="radio" name="jk" value="laki-laki" required> Laki-laki
+                <input type="radio" name="jk" value="perempuan" required> Perempuan
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="telepon">Nomor Telepon</label>
+            <span class="separator">:</span>
+            <input type="tel" id="telepon" name="telepon" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="alamat">Alamat Domisili</label>
+            <span class="separator">:</span>
+            <input type="text" id="alamat" name="alamat" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nmUsaha">Nama Usaha Yang Diajukan</label>
+            <span class="separator">:</span>
+            <input type="text" id="nmUsaha" name="nmUsaha" required>
+        </div>
+
+        <div class="form-group">
+            <label for="jnsUsaha">Jenis Usaha</label>
+            <span class="separator">:</span>
+            <select id="jnsUsaha" name="jnsUsaha" required>
+                <option value="null">-</option>
+                <option value="kuliner">Usaha Kuliner</option>
+                <option value="furnitur">Furnitur dan Peralatan Rumah Tangga</option>
+                <option value="pakaian">Pakaian dan Souvenir</option>
+                <option value="perkebunan">Perkebunan</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="tujuan">Tujuan Pendanaan</label>
+            <span class="separator">:</span>
+            <select id="tujuan" name="tujuan" required>
+                <option value="null">-</option>
+                <option value="modal">Modal Usaha</option>
+                <option value="pengembangan">Mengembangkan Usaha</option>
+                <option value="investasi">Investasi</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="nominal">Ekspektasi Nominal Pendanaan Yang Diterima</label>
+            <span class="separator">:</span>
+            <input type="number" id="nominal" name="nominal" required>
+        </div>
+
+        <div class="form-group">
+            <label>Apakah Saat Ini Anda Memiliki Pinjaman Aktif?</label>
+            <span class="separator">:</span>
+            <div class="radio-group">
+                <input type="checkbox" id="iya" name="iya">
+                    <label for="agree">iya</label>
+                <input type="checkbox" id="tidak" name="tidak">
+                    <label for="agree">tidak</label>
+                
+                <!-- <input type="radio" name="pjm" value="Iya" required> Iya
+                <input type="radio" name="pjm" value="Tidak" required> Tidak -->
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="ktp">KTP Pemohon</label>
+            <span class="separator">:</span>
+            <input type="file" id="ktp" name="ktp" required>
+        </div>
+
+        <div class="form-group">
+            <label for="kk">Kartu Keluarga Pemohon</label>
+            <span class="separator">:</span>
+            <input type="file" id="kk" name="kk" required>
+        </div>
+
+        <div class="form-group">
+            <label for="proposal">Proposal Bisnis UMKM</label>
+            <span class="separator">:</span>
+            <input type="file" id="proposal" name="proposal" required>
+        </div>
+
+        <div class="text">
+            <p>Dengan ini, saya menyatakan bahwa data yang saya isi dalam formulir ini adalah benar, sesuai dengan keadaan sebenarnya, 
+                dan saya bersedia menerima segala konsekuensi yang timbul apabila di kemudian hari ditemukan ketidaksesuaian atau ketidakbenaran data tersebut. 
+                <br><input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">Ya, Saya Bersedia</label>
+            </p>
+        </div>
+         
+        <input type="submit" value="Ajukan">
+    </form>
+</body>
+</html>
